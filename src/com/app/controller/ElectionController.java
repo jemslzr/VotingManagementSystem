@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.InputMismatchException;
 
     public class ElectionController {
         private ElectionView view;
@@ -20,6 +21,7 @@ import java.time.Period;
             this.dao = dao;  // Assign DAO
     }
 
+//MAIN MENU        
     public void run() {
         boolean running = true;
         while (running) {
@@ -39,7 +41,7 @@ import java.time.Period;
                     default:
                         System.out.println("Invalid option. Please try again.");
                 }
-            } catch (java.util.InputMismatchException e) {
+            } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a number.");
                 view.clearScannerBuffer(); 
             }
@@ -97,7 +99,7 @@ import java.time.Period;
                     default:
                         System.out.println("Invalid option. Please enter a valid number.");
                 }
-            } catch (java.util.InputMismatchException e) {
+            } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a number.");
                 view.clearScannerBuffer(); 
             }
@@ -228,7 +230,7 @@ import java.time.Period;
                     default:
                         System.out.println("Invalid option. Please enter a valid number.");
                 }
-            } catch (java.util.InputMismatchException e) {
+            } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a number.");
                 view.clearScannerBuffer(); 
             }
