@@ -11,11 +11,11 @@ public class ElectionView {
     public static final String RED_TEXT = "\u001B[31m";
     public static final String BLUE_TEXT = "\u001B[34m";
     public static final String WHITE_BACKGROUND = "\u001B[47m";
-    private Scanner scanner;
+    private static Scanner scanner = new Scanner(System.in);
 
-    public ElectionView() {
+    /*public ElectionView() {
         this.scanner = new Scanner(System.in);
-    }
+    }8/
 
       /*Show Main Menu
      Welcome to the Election System
