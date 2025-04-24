@@ -5,7 +5,6 @@ CREATE TABLE voters (
     name VARCHAR(100),
     address VARCHAR(255),
     date_of_birth DATE,
-    last_vote_date DATE
 );
 
 CREATE TABLE candidates (
@@ -23,20 +22,4 @@ CREATE TABLE votes (
     candidate_id INT,
     FOREIGN KEY (voter_id) REFERENCES voters(id),
     FOREIGN KEY (candidate_id) REFERENCES candidates(id)
-);
-
-CREATE TABLE archivedvoters (
-    id INT,
-    name VARCHAR(100),
-    address VARCHAR(255),
-    date_of_birth DATE,
-    last_vote_date DATE,
-    archive_date TIMESTAMP
-);
-
-CREATE TABLE archivedvotes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    voter_name VARCHAR(100),
-    candidate_name VARCHAR(100),
-    vote_date TIMESTAMP
 );
